@@ -1,0 +1,185 @@
+<HTML>
+<HEAD>
+<TITLE>What Laid-off RadioShack employee (Valdosta branch) are you?</TITLE>
+<style type="text/css">
+.style1 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FF0080;
+}
+  .style2 {font-family: Arial, Helvetica, sans-serif}
+  .style3 {color: #C70027}
+  .style5 {color: #F0AD2F}
+  .style6 {color: #598E00}
+  .style11 {color: #5F2BA3}
+</style>
+</HEAD>
+
+<BODY onLoad="populate()">
+<script>
+
+var Quest = new Array(10);
+
+function populate() {
+  for(var i=0; i<10; i++) { Quest[i]=0; }
+}
+// function will continue to work if a question isnt answered
+
+function total() {
+  myScore=0;
+  for (var i=0; i<10; i++) { myScore=myScore+Quest[i]; }
+  analyzer(myScore);
+}
+// adds number of points from answers
+
+myContents = new Array();
+myContents[0] = "You\'re Elroy Bergeron!"
+  + " It doesn\'t take long to dislink Elroy, but the fact he\'s narcissistic and irresponsible is just the tip of the"
+  + " iceberg. His love for technology and fear of the ocean is what inspired him to get a job at RadioShack."
+  + " When He\'s not stealing money from the register, he enjoys volunteering at his local YMCA. Customers find"
+  + " his stutter charming.";
+myContents[1] = "You\'re Martha Goldman!"
+  + " Martha is loved for her daring nature. Not many people are willing to sell stolen organs on the black"
+  + " market. Despite her large income, she enjoys selling electronics as it keeps her grounded. Her stamp collection "
+  + " is impressive and often gets in trouble for trying to sneak her pet Magpie into work.";
+myContents[2] = "You\'re Sheila Lichtenberger!"
+  + " She is known for the lady with no arms but that doesn\'t stop her from driving around town in her 2002 Honda Accord!"
+  + " Customers admire her nurturing nature and lack of a high school diploma. She has an unhealthy obsession with Jacob"
+  + " Black from Twilight her dream in life is to educate others on lead poisoning.";
+myContents[3] = "You\'re David Davidson!"
+  + " David is a family guy who wishes he could lay eggs. If you give him a donation of two US dollars, he will sing an"
+  + " above average version of Livin\' On a Prayer by Journey. But don\'t get on his bad side, he is known to move into"
+  + " peoples homes without their knowledge or consent.";
+myContents[4] = "Your\'re Jarred Wills"
+  + " Jarred sold the family farm to pursue his dream of becoming a debt collector. He is famous online for his Harry"
+  + " Potter fan-fiction. He started working at RadioShack because he was recently released from serving 9 years in prison."
+  + " Congrats on the freedom Jarred!";
+myContents[5] = "You\'re Leopoldo Escoto!"
+  + " He is a talentless loser who loves his job at RadioShack. Customers often mistake him for a blad Owen Wilson."
+  + " His interests include archaeology, preparing for the downfall of civilization, and parakeets."
+  + " No one really likes him.";
+
+function analyzer (myScore) {
+  if (myScore>60) { myContentsPtr = 0; }
+  else { if (myScore > 50) { myContentsPtr = 1; }
+    else { if(myScore>40)  { myContentsPtr = 2; }
+      else { if(myScore>30) { myContentsPtr = 3; }
+        else { if(myScore>20) { myContentsPtr = 4; }
+          else { myContentsPtr = 5; }
+        }
+      }
+    }
+  }
+  myDisplay(myContents[myContentsPtr])
+}
+
+function myDisplay(myContents) {
+  alert(myContents);
+}
+//opens window to show results
+
+function saver(q, points) {
+  q=q-1;
+  Quest[q]=points
+}
+</script>
+
+<FORM NAME="personalityForm">
+<span class="style1">What Laid-off RadioShack employee (Valdosta branch) are you?</span><br>
+<br>
+
+<span class="style2">
+
+<span class="style3">1. What is your favorite way to spend a Friday night?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q1" onClick="saver(1,2)">Alone at home with my favorite movie Titanic<br>
+<INPUT TYPE="RADIO" NAME="q1" onClick="saver(1,4)">At the locak Dairy Queen with my cousins<br>
+<INPUT TYPE="RADIO" NAME="q1" onClick="saver(1,6)">Gravedigging<br>
+</span><br>
+
+<span class="style3">2. What is your worst quality?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,6)">I'm unreliable<br>
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,4)">I lie a lot<br>
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,7)">I yell profanity<br>
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,2)">I hate children<br>
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,1)">I don't vote<br>
+</span><br>
+
+<span class="style3">3. What would you fill a pinata with?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,4)">Donuts<br>
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,2)">Bees<br>
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,5)">My hopes and dreams<br>
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,7)">Neil deGrasse Tyson<br>
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,6)">A smaller pinata<br>
+</span><br>
+
+<span class="style3">4. Will you drive me to the airport?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,4)">Yes<br>
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,6)">Yes<br>
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,2)">Yes<br>
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,1)">Yes<br>
+</span><br>
+
+<span class="style3">5. What would you replace your hands with?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q5" onClick="saver(5,6)">Saturn<br>
+<INPUT TYPE="RADIO" NAME="q5" onClick="saver(5,4)">Whips<br>
+<INPUT TYPE="RADIO" NAME="q5" onClick="saver(5,3)">Tongues<br>
+<INPUT TYPE="RADIO" NAME="q5" onClick="saver(5,5)">A nice platter of chips and salsa<br>
+</span><br>
+
+<span class="style3">6. How many shooters were involved in the JFK assassination?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q6" onClick="saver(6,6)">0<br>
+<INPUT TYPE="RADIO" NAME="q6" onClick="saver(6,4)">4<br>
+<INPUT TYPE="RADIO" NAME="q6" onClick="saver(6,2)">18<br>
+</span><br>
+
+<span class="style3"><br>7.What is your WiFi password?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q7" onClick="saver(7,6)">1234abcdz<br>
+<INPUT TYPE="RADIO" NAME="q7" onClick="saver(7,2)">LdXLdgG11zNN5mw<br>
+<INPUT TYPE="RADIO" NAME="q7" onClick="saver(7,4)">suprwzrd1<br>
+</span><br>
+
+<span class="style3">8. What is your biggest regret?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q8" onClick="saver(8,6)" >Leaving my wife and kids<br>
+<INPUT TYPE="RADIO" NAME="q8" onClick="saver(8,7)" >Still being alive<br>
+<INPUT TYPE="RADIO" NAME="q8" onClick="saver(8,5)" >Hiding the cure for cancer<br>
+<INPUT TYPE="RADIO" NAME="q8" onClick="saver(8,4)" >Not watering your plants for a few days<br>
+<INPUT TYPE="RADIO" NAME="q8" onClick="saver(8,3)" >Not saving my son from the burning building<br>
+<INPUT TYPE="RADIO" NAME="q8" onClick="saver(8,2)" >Stealing my neighbors newspapers<br>
+<INPUT TYPE="RADIO" NAME="q8" onClick="saver(8,1)" >Starting WWIII<br>
+</span><br>
+
+<span class="style3">9. I've infected your computer with a virus. I have all of your personal information. Your identity, credit card, and dog are now mine.</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q9" onClick="saver(9,7)" >ok<br>
+<INPUT TYPE="RADIO" NAME="q9" onClick="saver(9,6)" >wow<br>
+<INPUT TYPE="RADIO" NAME="q9" onClick="saver(9,4)" >( ͡° ͜ʖ ͡°)<br>
+<INPUT TYPE="RADIO" NAME="q9" onClick="saver(9,2)" >01000110 01110101 01100011 01101011<br>
+<INPUT TYPE="RADIO" NAME="q9" onClick="saver(9,1)" >no u<br>
+</span><br>
+
+<span class="style3"><br>10. What is your favorite flower?</span><br>
+<span class="style6">
+<INPUT TYPE="RADIO" NAME="q10" onClick="saver(10,4)" >Rose<br>
+<INPUT TYPE="RADIO" NAME="q10" onClick="saver(10,2)" >Yellow Tulips<br>
+<INPUT TYPE="RADIO" NAME="q10" onClick="saver(10,3)" >Common Sunflower<br>
+<INPUT TYPE="RADIO" NAME="q10" onClick="saver(10,5)" >Carrion flower<br>
+<INPUT TYPE="RADIO" NAME="q10" onClick="saver(10,6)" >Lily<br>
+<INPUT TYPE="RADIO" NAME="q10" onClick="saver(10,1)" >Hibiscus<br>
+ </span><br>
+
+<br>
+<INPUT TYPE="button" NAME="result" Value="Click here to see your result" onClick="total()">
+<span>
+
+</FORM>
+</BODY>
+</HTML>
